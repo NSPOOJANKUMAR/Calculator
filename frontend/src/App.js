@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [display, setDisplay] = useState('0');
   const [expression, setExpression] = useState('');
-  const [apiEndpoint, setApiEndpoint] = useState('http://localhost:3001');
+  const [apiEndpoint, setApiEndpoint] = useState('https://your-api-id.execute-api.region.amazonaws.com/test/CalculatorManager');
 
   const handleNumberClick = (num) => {
     if (display === '0') {
@@ -56,7 +56,7 @@ function App() {
     if (!expression) return;
 
     try {
-      const response = await fetch(`${apiEndpoint}/calculate`, {
+      const response = await fetch(apiEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [display, setDisplay] = useState('0');
   const [expression, setExpression] = useState('');
-  const [apiEndpoint, setApiEndpoint] = useState('https://your-api-id.execute-api.region.amazonaws.com/test/CalculatorManager');
+  const [apiEndpoint, setApiEndpoint] = useState('https://8uhkiaiv4i.execute-api.us-east-1.amazonaws.com/Test');
 
   const handleNumberClick = (num) => {
     if (display === '0') {
